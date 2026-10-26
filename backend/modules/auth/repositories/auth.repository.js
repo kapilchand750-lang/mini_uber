@@ -1,5 +1,4 @@
-
-const db = require("../config/db");
+const db = require("../../../config/db");
 
 function findByUsername(username) {
     return new Promise((resolve, reject) => {
