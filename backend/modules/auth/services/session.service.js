@@ -1,7 +1,6 @@
 const refreshTokenService = require("./refresh-token.service");
 const sessionRepository = require("../repositories/session.repository");
 const authRepository = require("../repositories/auth.repository");
-
 const REFRESH_TOKEN_LIFETIME_DAYS = 7;
 
 function calculateExpiryDate(){

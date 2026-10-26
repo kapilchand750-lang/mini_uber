@@ -1,6 +1,6 @@
 const express = require("express");
 const db = require("./config/db");
-const authRoutes = require("./routes/auth.routes");
+const authRoutes = require("./modules/auth/routes/auth.routes");
 const {authenticateToken} = require("./middleware/auth.middleware");
 const app = express();
 const PORT = 4000;

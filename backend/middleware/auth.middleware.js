@@ -1,4 +1,4 @@
-const tokenService = require("../services/token.service");
+const tokenService = require("../modules/auth/services/token.service");
 
 function authenticateToken(req, res, next){
     const authorizationHeader = req.headers.authorization;

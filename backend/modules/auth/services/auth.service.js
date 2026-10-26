@@ -1,4 +1,4 @@
-const db = require("../config/db");
+const db = require("../../../config/db");
 const passwordService = require("./password.service");
 const authRepository = require("../repositories/auth.repository");
 
