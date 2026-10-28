@@ -201,3 +201,18 @@ CREATE TABLE IF NOT EXISTS USER_SESSION (
 
     INDEX idx_session_user (user_id)
 );
+
+INSERT INTO VEHICLE_TYPE (type_name)
+VALUES
+    ('2-Wheeler'),
+    ('3-Wheeler'),
+    ('4-Wheeler');
+
+ALTER TABLE DRIVER
+ADD COLUMN application_status
+ENUM('PENDING', 'APPROVED', 'REJECTED')
+NOT NULL DEFAULT 'PENDING';
+
+ALTER TABLE `USER`
+ADD COLUMN role ENUM('USER', 'ADMIN')
+NOT NULL DEFAULT 'USER';

@@ -5,7 +5,7 @@ function generateAccessToken(user) {
     const expiresIn = process.env.JWT_ACCESS_EXPIRES_IN || "15m";
 
     if(!secret || secret === "replace_with_a_random_secret") {
-        throw new ERROR("JWT access secret is not configured.");
+        throw new Error("JWT access secret is not configured.");
     }
 
     return jwt.sign({
