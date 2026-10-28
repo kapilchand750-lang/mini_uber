@@ -3,6 +3,7 @@ const express = require("express");
 const authRoutes = require("./modules/auth/routes/auth.routes");
 const userRoutes = require("./modules/users/routes/user.routes");
 const driverRoutes = require("./modules/drivers/routes/driver.routes");
+const vehicleRoutes = require("./modules/vehicles/routes/vehicle.routes");
 
 const app = express();
 const PORT = 4000;
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/drivers", driverRoutes);
+app.use("/api/vehicles", vehicleRoutes);
 
 // Health check
 app.get("/api/test", (req, res) => {
